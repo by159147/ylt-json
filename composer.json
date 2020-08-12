@@ -13,6 +13,9 @@
         "laravel/framework": "^7.0"
     },
     "autoload": {
+        "psr-4": {
+            "Faed\\Json\\": "src/"
+        },
         "files": [
             "src/helpers.php"
         ]
