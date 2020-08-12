@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\JsonResponse;
-if (!function_exists('json')) {
+if (!function_exists('jsonData')) {
     /**
      * 返回
      * @param string $code
@@ -11,7 +11,7 @@ if (!function_exists('json')) {
      * @param int $option
      * @return JsonResponse
      */
-    function json($code = '00',$data = [], $stateCode = 200, array $header = [], int $option = 0)
+    function jsonData($code = '00',$data = [], $stateCode = 200, array $header = [], int $option = 0)
     {
         return response()->json(getData($code,$data), $stateCode, $header, $option);
     }
