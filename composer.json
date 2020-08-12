@@ -1,0 +1,27 @@
+{
+    "name": "faed/ylt-json",
+    "description": "余乐通-公司-辅助函数",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "faed",
+            "email": "327399770@qq.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^7.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Faed\\Json\\JsonServiceProvider"
+            ]
+        }
+    }
+}
