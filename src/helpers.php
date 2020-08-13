@@ -42,7 +42,7 @@ if (!function_exists('errorLog')){
      * @param $e
      * @param string $msg
      */
-    function ($e,$msg=''){
+    function errorLog($e,$msg=''){
         Log::error($msg,['msg'=>$e->getMessage(),'file'=>$e->getFile(),'line'=>$e->getLine()]);
     }
 }
