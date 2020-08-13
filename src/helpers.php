@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
+
 if (!function_exists('jsonData')) {
     /**
      * 返回
@@ -32,6 +34,15 @@ if (!function_exists('getCode')){
         ],config('json-ylt'));
         return ['msg'=>@$number[$code] ? :'错误','code'=>$code];
     }
+}
 
-
+if (!function_exists('errorLog')){
+    /**
+     * 记录错误日志
+     * @param $e
+     * @param string $msg
+     */
+    function ($e,$msg=''){
+        Log::error($msg,['msg'=>$e->getMessage(),'file'=>$e->getFile(),'line'=>$e->getLine()]);
+    }
 }
