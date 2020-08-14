@@ -85,7 +85,7 @@ if (!function_exists('is_assoc')){
      * @return bool
      */
     function isAssoc($array) {
-        if (is_array($array)){
+        if (!is_array($array)){
             $array = $array->toArray();
         }
         return array_keys($array) !== range(0, count($array) - 1);
