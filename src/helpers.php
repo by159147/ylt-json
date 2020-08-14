@@ -43,7 +43,7 @@ if (!function_exists('jsonDataMsg')){
      */
     function jsonDataMsg($data = [],$msg = '')
     {
-        if (isAssoc($data)){
+        if (isAssoc($data) && !empty($data)){
             $data = [$data];
         }
         return response()->json(['data'=>$data,'msg'=>$msg,'code'=>'100']);
