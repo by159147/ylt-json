@@ -15,7 +15,7 @@ if (!function_exists('jsonData')) {
      */
     function jsonData($code = '00',$data = [], $stateCode = 200, array $header = [], int $option = 0)
     {
-        if (isAssoc($data)){
+        if (isAssoc($data) && !empty($data)){
             $data = [$data];
         }
         return response()->json(getData($code,$data), $stateCode, $header, $option);
